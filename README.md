@@ -17,6 +17,8 @@ Connects node.js to the PostgreSQL server. To specify which database to connect 
 To create the database follow the instruction of the `query.sql ` file.
 
 ```
+.env
+
 PGUSER=postgres 
 PGHOST=localhost
 PGPASSWORD=
