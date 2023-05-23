@@ -48,6 +48,9 @@ function App() {
             setImgSRC={setImgSRC}
             setDescripcion={setDescripcion}
             agregarPost={createPost}
+            titulo={titulo}
+            imgSrc={imgSrc}
+            descripcion={descripcion}
           />
         </div>
         <div className="col-12 col-sm-8 px-5 row posts align-items-start">

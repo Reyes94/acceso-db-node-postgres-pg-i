@@ -1,4 +1,4 @@
-# Desafio Latam: Database Access with Node
+# Desafio Latam: Database Access with Node I
 
 In this challenge, a server is created that provides GET and POST routes for queries and saves the posts in a PostgreSQL database with the pg package.
 
