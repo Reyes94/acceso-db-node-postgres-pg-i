@@ -1,4 +1,11 @@
 export const handleErrors = (code) => {
+  if (!code) {
+    return {
+      status: 500,
+      message: "Server error, unknown code",
+    };
+  }
+
   switch (code) {
     case "22P02":
       return {
@@ -24,6 +31,11 @@ export const handleErrors = (code) => {
       return {
         status: 404,
         message: "You must complete all required fields: titulo, img, descripcion"
+      };
+    case "402":
+      return {
+        status: 404,
+        message: "You must specify the post id"
       };
     case "404":
       return {

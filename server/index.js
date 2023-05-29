@@ -23,6 +23,7 @@ app.get("/posts", async (req, res) => {
     const result = await getPosts();
     return res.json({ ok: true, result });
   } catch (error) {
+    console.log(error)
     const { status, message } = handleErrors(error.code)
     return res.status(status).json({ ok: false, result: message });
   }
@@ -34,6 +35,7 @@ app.get("/posts/:id", async (req, res) => {
     const result = await getPost(id)
     return res.json({ ok: true, result });
   } catch (error) {
+    console.log(error)
     const { status, message } = handleErrors(error.code)
     return res.status(status).json({ ok: false, result: message });
   }
@@ -45,6 +47,7 @@ app.post("/posts", async (req, res) => {
     const result = await createPost({ titulo, img, descripcion})
     return res.status(201).json({ ok: true, result })
   } catch (error) {
+    console.log(error)
     const { status, message } = handleErrors(error.code)
     return res.status(status).json({ ok: false, result: message });
   }
